@@ -125,12 +125,14 @@ operands.forEach(operand => {
     });
 });
     
+
 operatorBtn.forEach(btn => {
     btn.addEventListener("click", () => {
         operationSelection(btn.innerText);
         displayNum();        
     })
 })
+
 
 resultBtn.addEventListener("click", () => {
     calculatorOperation();
