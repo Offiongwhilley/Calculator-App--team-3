@@ -139,6 +139,8 @@ resultBtn.addEventListener("click", () => {
     displayNum();
 });
 
+
+
 // let text = 'hello world';
 // console.log(text.slice(0, -1));
 
