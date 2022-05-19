@@ -1,0 +1,188 @@
+:root {
+    --bg-theme: hsl(0, 0%, 90%);
+    --bg-toggle-keypad: hsl(0, 5%, 81%);
+    --bg-screen: hsl(0, 0%, 93%);
+    --bg-del-reset-key: hsl(185, 42%, 37%);
+    --key-shadow-del-reset: hsl(185, 58%, 25%);
+    --bg-keys: hsl(45, 7%, 89%);
+    --key-shadow-keys: hsl(35, 11%, 61%);
+    --bg-result-toggle-key: hsl(25, 98%, 40%);
+    --key-shadow-result: hsl(25, 99%, 27%);
+    --text-color: hsl(60, 10%, 19%); 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: spartan, sans-serif;
+    font-size: 32px;
+}
+
+
+body {
+    height: 95vh;
+    background-color: var(--bg-theme);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+label, h6 {
+    font-size: 13px;
+    color: var(--text-color);
+    position: relative;
+    left: 70px;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    margin: 50px 0 10px;
+    position: relative;
+}
+
+
+.header > h1 {
+    color: var(--text-color);
+    position: absolute;
+    left: -85px;
+    top: -15px;
+}
+
+.header > h6 {
+    align-self: center;
+}
+
+.themes {
+    height: 30px;
+    width: 80px;
+    border-radius: 30px;
+    background-color: var(--bg-toggle-keypad);
+    position: relative;
+    left: 80px;
+}
+
+#theme1, #theme2, #theme3 {
+    appearance: none;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 30px;
+    top: 7px;
+    transition: 0.5s;
+}
+
+#theme1{
+    left:10px
+}
+
+#theme2{
+    left:33px;
+    background-color: var(--bg-result-toggle-key);
+}
+
+#theme3{
+    left:55px
+}
+
+label {
+    top: -40px;
+    margin: 2px;
+}
+
+label[for="theme1"] {
+    left: 13px;
+}
+  
+label[for="theme2"] {
+    left: 20px;
+}
+  
+label[for="theme3"] {
+    left: 26px;
+}
+/* input:checked {
+    background-color: var(--bg-result-toggle-key);
+} */
+
+.screen {
+    background-color: var(--bg-screen);
+    color: var(--text-color);
+    height: 80px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-right: 10px;
+}
+
+.screen > .previous-operand {
+    font-size: 15px;
+}
+
+
+.grid-container {
+    background-color: var(--bg-toggle-keypad);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(5, 70px);
+    padding: 15px 10px;
+    border-radius: 10px;
+}
+
+.grid-container > button {
+    background-color: var(--bg-keys);
+    color: var(--text-color);
+    box-shadow: 0 5px var(--key-shadow-keys);
+    margin: 0 8px;
+    padding: 8px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+.column-span {
+    grid-column: span 2;
+}
+
+button:nth-child(17), button:nth-child(4) {
+    background-color: var(--bg-del-reset-key);
+    box-shadow: 0 5px var(--key-shadow-del-reset);
+    color: var(--bg-keys);
+    font-size: 18px;
+    padding: 17px 0;
+}
+
+button:nth-child(18) {
+    background-color: var(--bg-result-toggle-key);
+    box-shadow: 0 5px var(--key-shadow-result);
+    color: white;
+}
+
+.attribution{
+    font-size:x-small;
+}
+
+.attribution a{
+    font-size:x-small;
+}
+
+
+
