@@ -26,9 +26,9 @@ let operation;
 //recall that we had set the value to each of the button/input elements to 0, 1 and 2 respectively
 function themeChange(i) {
     if(i === "0"){
-        links[0].setAttribute("href", "/design/css/styles.css");
+        links[0].setAttribute("href", "/css/styles.css");
     } else {
-        links[0].setAttribute("href", /design/css/theme${i}.css);
+        links[0].setAttribute("href", `/css/theme${i}.css`);
     }
 }
 
@@ -102,7 +102,7 @@ function calculatorOperation() {
 function displayNum() {
     currentOperandText.innerText = currentOperand.toLocaleString("en");
     if(operation !== undefined) {
-        prevOperandText.innerText = ${prevOperand} ${operation.toString("en")};
+        prevOperandText.innerText = `${prevOperand} ${operation.toString("en")}`;
     } else {
         prevOperandText.innerText = prevOperand;
     }
@@ -138,11 +138,3 @@ resultBtn.addEventListener("click", () => {
     calculatorOperation();
     displayNum();
 });
-
-
-
-// let text = 'hello world';
-// console.log(text.slice(0, -1));
-
-// let numba = 123;
-// console.log(numba.toString().slice(0, -1));
